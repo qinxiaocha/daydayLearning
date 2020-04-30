@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>你有使用过css的混合模式mix-blend-mode和background-blend-mode吗？</title>
+  </head>
+  <body>
+    <h1>CSS3 mix-blend-mode</h1>
+    <p>首先，要知道”blend-mode”就是混合模式的意思。那mix, 恩，我也不知道为什么命名为mix, 可能是该属性不仅可以作用于HTML，还可以作用于SVG，干脆叫mix一起捋过来。该CSS属性作用是让元素内容和这个元素的背景以及下面的元素发生“混合”</p>
+    <p>最近的Chrome以及FireFox浏览器都已经支持良好，而且无需使用私有前缀。</p>
+    <p>其支持的值很多，中英文对照如下：</p>
+    <pre>
+      mix-blend-mode: normal;          //正常
+      mix-blend-mode: multiply;        //正片叠底
+      mix-blend-mode: screen;          //滤色
+      mix-blend-mode: overlay;         //叠加
+      mix-blend-mode: darken;          //变暗
+      mix-blend-mode: lighten;         //变亮
+      mix-blend-mode: color-dodge;     //颜色减淡
+      mix-blend-mode: color-burn;      //颜色加深
+      mix-blend-mode: hard-light;      //强光
+      mix-blend-mode: soft-light;      //柔光
+      mix-blend-mode: difference;      //差值
+      mix-blend-mode: exclusion;       //排除
+      mix-blend-mode: hue;             //色相
+      mix-blend-mode: saturation;      //饱和度
+      mix-blend-mode: color;           //颜色
+      mix-blend-mode: luminosity;      //亮度
+
+      mix-blend-mode: initial;         //初始
+      mix-blend-mode: inherit;         //继承
+      mix-blend-mode: unset;           //复原
+    </pre>
+    <p>如果你想体验各个混合模式的作用表现，您可以狠狠地点击这里：
+    <a href="https://www.zhangxinxu.com/study/201505/css3-css4-mix-blend-mode.html">CSS3 mix-blend-mode混合模式Demo</a></p>
+    <h1>CSS3 background-blend-mode</h1>
+    <h2>background-blend-mode这个要更好理解一点，背景的混合模式。可以是背景图片见的混合，也可以是背景图片和背景色的混合。</h2>
+    <p>如果你想体验各个混合模式的作用表现，您可以狠狠地点击这里：
+      <a href="https://www.zhangxinxu.com/study/201505/css3-css4-background-blend-mode.html"> CSS3 background-blend-mode混合模式Demo</a>
+    </p>
+    <p>例如，选择一个常见的multiply正片叠底，结果两个妹子合体了：</p>
+    <p>需要注意的是，只能是background属性中的背景图片和颜色混合，而且只能在一个background属性中。</p>
+    <p>CSS3 backgrounds多背景IE9+浏览器就开始支持了。因此，你想混合多图，就是要逗号，一个一个写在background属性中就可以了，例如本Demo的两个妹子：</p>
+    <pre>.box {
+          background: url(mm1.jpg) no-repeat center, url(mm2.jpg) no-repeat center; 
+      }
+    </pre>
+  </body>
+</html>
