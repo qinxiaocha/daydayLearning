@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <body>
+    <h1>inputmode输入模式了解一下</h1>
+    <p>inputmode全局属性为具有屏幕键盘的设备向浏览器提供提示，以帮助它们在用户选择input或textarea元素时决定要显示哪个键盘。</p>
+    <pre>
+      <code class="language-html">
+        &lt;input type="text" inputmode=""&gt;
+        &lt;textarea inputmode=""&gt;
+      </code>
+    </pre>
+    <p>与更改type表单类型不同，<span style="color:#f00">inputmode</span>不会改变浏览器解释输入的方式 - 它<span style="color:#f00">只是指示浏览器显示哪个键盘</span>。</p>
+    <p>该inputmode属性历史悠久，但最近才被两大移动浏览器采用：适用于iOS的Safari和适用于Android的Chrome。在此之前，它在2012年以Firefox for Android方式实现，然后在几个月后被删除（尽管它仍可通过标志获得）。</p>
+    <p><strong>inputmode接受如下值：</strong></p>
+    <p><br><span style="color:#1abc9c"><strong>"none"</strong></span></p>
+    <p>没有虚拟键盘; 当应用程序或站点实现自己的键盘输入控件时，这很有用。</p>
+    <p><br><strong><span style="color:#1abc9c">"text"</span></strong></p>
+    <p>用户当前区域设置的标准文本输入键盘。</p>
+    <p><br><strong><span style="color:#1abc9c">"decimal"</span></strong></p>
+    <p>小数字输入键盘。</p>
+    <pre><code class="language-html">&lt;input type="text" inputmode="decimal"&gt;</code></pre>
+    <p>设置为decimal值的inputmode导致iOS发生细微变化，其中键盘看起来与tel值完全相同，但会用简单的十进制（.）替换+*键。另一方面，这对Android没有影响，它只使用数字键盘。</p>
+    <p><br><strong><span style="color:#1abc9c">"numeric"</span></strong></p>
+    <p>数字输入键盘。</p>
+    <pre><code class="language-html">&lt;input type="text" inputmode="numeric"&gt;</code></pre>
+    <p><br><strong><span style="color:#1abc9c">"tel"</span></strong></p>
+    <p><p>电话键盘输入，包括数字0到9，星号（“*”）和磅（“＃”）键。你也可以使用表单输入&lt;input type="tel"&gt;。</p></p>
+    <pre><code class="language-html">&lt;input type="text" inputmode="tel"&gt;</code></pre>
+    <p><br><strong><span style="color:#1abc9c">"search"</span></strong></p>
+    <p>为搜索输入优化的虚拟键盘。例如，返回键可以被重新标记为“搜索”，并且可以存在其他优化。</p>
+    <p><br><strong><span style="color:#1abc9c">"email"</span></strong></p>
+    <p>为输入电子邮件地址而优化的虚拟键盘; 通常这包括“@”字符以及其他优化。通常应使用需要输入电子邮件地址的表单输入&lt;input type="email"&gt;。</p>
+    <p><br><strong><span style="color:#1abc9c">"url"</span></strong></p>
+    <p>专为输入网址而优化的键盘。例如，这可能使“/”键更加突出。增强功能还可以包括历史记录访&#8203;&#8203;问等。请求URL的表单输入通常应该使用&lt;input type="url"&gt;。</p>
+  </body>
+</html>
